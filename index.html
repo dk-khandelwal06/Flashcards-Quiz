@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Machine Learning Flashcards Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-gradient"></div>
+
+  <div class="app-shell">
+    <header class="app-header">
+      <h1 class="deck-title">Machine Learning Flashcards</h1>
+      <div class="header-right">
+        <button id="themeToggle" class="btn icon-btn" aria-label="Toggle theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section class="score-panel glass-panel">
+        <div class="score-item">
+          <span class="label">Correct</span>
+          <span id="correctCount" class="value">0</span>
+        </div>
+        <div class="score-item">
+          <span class="label">Incorrect</span>
+          <span id="incorrectCount" class="value">0</span>
+        </div>
+        <div class="score-item">
+          <span class="label">Progress</span>
+          <span id="progressText" class="value">0 / 0</span>
+        </div>
+      </section>
+
+      <section class="progress-wrapper">
+        <div class="progress-bar-bg glass-panel">
+          <div id="progressBar" class="progress-bar-fill"></div>
+        </div>
+        <div id="lastScore" class="last-score-text"></div>
+      </section>
+
+      <section class="card-wrapper">
+        <div class="card-container">
+          <!-- Outer wrapper used for page-curl / slide animations -->
+          <div id="cardOuter" class="card-outer">
+            <!-- Inner used for 3D flip front/back -->
+            <div id="cardInner" class="card-inner">
+              <div class="card-face card-front">
+                <div class="card-face-label">Question</div>
+                <p id="cardQuestion" class="card-text"></p>
+              </div>
+              <div class="card-face card-back">
+                <div class="card-face-label">Answer</div>
+                <p id="cardAnswer" class="card-text"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="controls">
+        <div class="nav-controls">
+          <button id="prevBtn" class="btn nav-btn" aria-label="Previous card">
+            ⬅ Prev
+          </button>
+          <button id="flipBtn" class="btn primary-btn">
+            Show Answer (Space)
+          </button>
+          <button id="nextBtn" class="btn nav-btn" aria-label="Next card">
+            Next ➡
+          </button>
+        </div>
+
+        <div class="mark-controls">
+          <button id="knewBtn" class="btn success-btn">
+            I knew it (Enter)
+          </button>
+          <button id="didntBtn" class="btn danger-btn">
+            I didn’t
+          </button>
+        </div>
+
+        <div class="deck-controls">
+          <button id="restartBtn" class="btn secondary-btn">
+            Restart Deck
+          </button>
+          <button id="shuffleBtn" class="btn secondary-btn">
+            Shuffle Deck
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="app-footer">
+    <div class="footer-credit-box">
+      <div>Created by: Daksh Khandelwal</div>
+      <div><strong>IIT JODHPUR</strong> — B.S Student</div>
+    </div>
+  </footer>
+
+  <!-- Confetti / flowers container -->
+  <div id="confettiContainer" class="confetti-container"></div>
+
+  <!-- Completion popup -->
+  <div id="completionOverlay" class="completion-overlay hidden" aria-hidden="true">
+    <div class="completion-modal glass-panel">
+      <h2>🎉 Congratulations!</h2>
+      <p>You have completed the deck!</p>
+      <p id="completionStats" class="completion-stats"></p>
+      <button id="completionCloseBtn" class="btn primary-btn">
+        Close
+      </button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
