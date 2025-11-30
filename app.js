@@ -447,13 +447,26 @@ let hasCompletedDeck = false;
     restartBtn.addEventListener("click", restartDeck);
     shuffleBtn.addEventListener("click", shuffleDeck);
     themeToggle.addEventListener("click", toggleTheme);
-  
+
     completionCloseBtn.addEventListener("click", closeCompletionModal);
     completionOverlay.addEventListener("click", (e) => {
       if (e.target === completionOverlay) {
         closeCompletionModal();
       }
     });
-  
+
+    // Add click/tap event to card for flip functionality
+    cardOuter.addEventListener("click", (e) => {
+      // Don't flip if clicking on buttons or other interactive elements
+      if (e.target.closest("button")) return;
+      toggleFlip();
+    });
+    // Also support touch events for mobile
+    cardOuter.addEventListener("touchend", (e) => {
+      if (e.target.closest("button")) return;
+      e.preventDefault();
+      toggleFlip();
+    });
+
     document.addEventListener("keydown", handleKeyDown);
   }
