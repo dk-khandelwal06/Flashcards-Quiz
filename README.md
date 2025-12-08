@@ -48,17 +48,6 @@ Perfect for revising basic Machine Learning topics in a fun and fast way!
 
 ---
 
-## 📂 Folder Structure
-
-/flashcards-quiz-app
-│
-├── index.html
-├── style.css
-└── script.js
-
-
----
-
 ## 📌 Topics Covered in Flashcards
 
 - What is supervised learning?
