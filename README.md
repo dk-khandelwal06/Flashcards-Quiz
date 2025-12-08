@@ -16,8 +16,6 @@ This is a flashcard-style quiz web app built using HTML, CSS, and JavaScript —
 - Cursor.ai (AI-assisted development)
 - Vercel (for hosting)
 
-### 📸 Screenshots:
-![screenshot](https://flashcards-quiz-rouge.vercel.app/og-image.png) *(optional)*
 
 ---
 
