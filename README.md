@@ -44,7 +44,7 @@ Perfect for revising basic Machine Learning topics in a fun and fast way!
 
 ## 📸 Preview Screenshot (Optional)
 
-![Flashcard Preview](https://flashcards-quiz-rouge.vercel.app/og-image.png)
+![Flashcard Preview](./screenshot.png)
 
 ---
 
