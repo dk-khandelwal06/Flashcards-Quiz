@@ -42,7 +42,7 @@ Perfect for revising basic Machine Learning topics in a fun and fast way!
 
 ---
 
-## 📸 Preview Screenshot (Optional)
+## 📸 Preview Screenshot
 
 ![Flashcard Preview](./screenshot.png)
 
@@ -55,7 +55,7 @@ Perfect for revising basic Machine Learning topics in a fun and fast way!
 - Overfitting vs Underfitting
 - What is a confusion matrix?
 - What is model accuracy?
-*(and more...)*
+- and more...
 
 ---
 
